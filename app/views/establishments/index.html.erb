@@ -6,9 +6,9 @@
   <% @establishments.each do |establishment| %>
     <%= render establishment %>
     <p>
-      <%= link_to "Show this establishment", establishment %>
+      <%= link_to "Show this establishment", group_establishment_path(@group, establishment) %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New establishment", new_establishment_path %>
+<%= link_to "New establishment", new_group_establishment_path(@group) %>

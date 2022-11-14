@@ -1,0 +1,5 @@
+main {
+  width: 375px;
+  min-height: 100vh;
+  background-color: var(--color-4);
+}

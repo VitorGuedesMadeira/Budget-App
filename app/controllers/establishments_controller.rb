@@ -1,6 +1,7 @@
 class EstablishmentsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_establishment, only: %i[ show edit update destroy ]
+  before_action :set_group
 
   # GET /establishments or /establishments.json
   def index
@@ -23,10 +24,11 @@ class EstablishmentsController < ApplicationController
   # POST /establishments or /establishments.json
   def create
     @establishment = Establishment.new(establishment_params)
+    @establishment.user = current_user
 
     respond_to do |format|
       if @establishment.save
-        format.html { redirect_to establishment_url(@establishment), notice: "Establishment was successfully created." }
+        format.html { redirect_to group_establishments_path, notice: "Establishment was successfully created." }
         format.json { render :show, status: :created, location: @establishment }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -39,7 +41,7 @@ class EstablishmentsController < ApplicationController
   def update
     respond_to do |format|
       if @establishment.update(establishment_params)
-        format.html { redirect_to establishment_url(@establishment), notice: "Establishment was successfully updated." }
+        format.html { redirect_to group_establishment_path(@group, @establishment), notice: "Establishment was successfully updated." }
         format.json { render :show, status: :ok, location: @establishment }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -53,7 +55,7 @@ class EstablishmentsController < ApplicationController
     @establishment.destroy
 
     respond_to do |format|
-      format.html { redirect_to establishments_url, notice: "Establishment was successfully destroyed." }
+      format.html { redirect_to group_establishments_path, notice: "Establishment was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -62,6 +64,10 @@ class EstablishmentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_establishment
       @establishment = Establishment.find(params[:id])
+    end
+
+    def set_group
+      @group = Group.find(params[:group_id])
     end
 
     # Only allow a list of trusted parameters through.

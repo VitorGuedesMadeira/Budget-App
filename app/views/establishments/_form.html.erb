@@ -1,4 +1,4 @@
-<%= form_with(model: establishment) do |form| %>
+<%= form_with model: establishment, url: group_establishments_path(@group) do |form| %>
   <% if establishment.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(establishment.errors.count, "error") %> prohibited this establishment from being saved:</h2>

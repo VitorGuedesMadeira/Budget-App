@@ -3,8 +3,8 @@
 <%= render @establishment %>
 
 <div>
-  <%= link_to "Edit this establishment", edit_establishment_path(@establishment) %> |
-  <%= link_to "Back to establishments", establishments_path %>
+  <%= link_to "Edit this establishment", edit_group_establishment_path(@group, @establishment) %>
+  <%= link_to "Back to establishments", group_establishments_path %>
 
-  <%= button_to "Destroy this establishment", @establishment, method: :delete %>
+  <%= button_to "Destroy this establishment", group_establishment_path(@establishment), method: :delete %>
 </div>

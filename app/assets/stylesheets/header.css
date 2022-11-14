@@ -1,0 +1,6 @@
+header {
+  width: 375px;
+  height: 50px;
+  background-color: var(--color-1);
+  color: white;
+}
