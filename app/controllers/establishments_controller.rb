@@ -1,4 +1,5 @@
 class EstablishmentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_establishment, only: %i[ show edit update destroy ]
 
   # GET /establishments or /establishments.json
