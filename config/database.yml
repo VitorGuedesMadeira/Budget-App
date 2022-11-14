@@ -22,7 +22,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: <%= ENV['POSTGRES_HOST'] %>
   username: <%= POSTGRES_USER='postgres' %>
-  password: <%= POSTGRES_PASSWORD='Microverse163155!' %>git a
+  password: <%= POSTGRES_PASSWORD='Microverse163155!' %>
 
 development:
   <<: *default
