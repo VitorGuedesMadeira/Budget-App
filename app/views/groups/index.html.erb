@@ -7,6 +7,8 @@
     <%= render group %>
     <p>
       <%= link_to "Show this group", group_establishments_path(group) %>
+      <%= link_to "Edit this group", edit_group_path(group) %>
+      <%= button_to "Destroy this group", group_path(group), method: :delete %>
     </p>
   <% end %>
 </div>

@@ -5,7 +5,7 @@ class EstablishmentsController < ApplicationController
 
   # GET /establishments or /establishments.json
   def index
-    @establishments = Establishment.all
+    @establishments = @group.establishments
   end
 
   # GET /establishments/1 or /establishments/1.json

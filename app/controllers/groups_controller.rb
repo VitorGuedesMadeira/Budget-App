@@ -13,7 +13,7 @@ class GroupsController < ApplicationController
 
   # GET /groups/new
   def new
-    @group = Group.new
+    @group = current_user.groups.build
   end
 
   # GET /groups/1/edit
@@ -22,12 +22,11 @@ class GroupsController < ApplicationController
 
   # POST /groups or /groups.json
   def create
-    @group = Group.new(group_params)
-    @group.user = current_user
+    @group = current_user.groups.build(group_params)
 
     respond_to do |format|
       if @group.save
-        format.html { redirect_to group_establishments_path(@group), notice: "Group was successfully created." }
+        format.html { redirect_to groups_path, notice: "Group was successfully created." }
         format.json { render :show, status: :created, location: @group }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +39,7 @@ class GroupsController < ApplicationController
   def update
     respond_to do |format|
       if @group.update(group_params)
-        format.html { redirect_to group_path(@group), notice: "Group was successfully updated." }
+        format.html { redirect_to groups_path, notice: "Group was successfully updated." }
         format.json { render :show, status: :ok, location: @group }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -54,7 +53,7 @@ class GroupsController < ApplicationController
     @group.destroy
 
     respond_to do |format|
-      format.html { redirect_to group_path(@group), notice: "Group was successfully destroyed." }
+      format.html { redirect_to groups_path, notice: "Group was successfully destroyed." }
       format.json { head :no_content }
     end
   end
