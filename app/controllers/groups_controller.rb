@@ -15,10 +15,12 @@ class GroupsController < ApplicationController
   # GET /groups/new
   def new
     @group = current_user.groups.build
+    @title = 'New group'
   end
 
   # GET /groups/1/edit
   def edit
+    @title = 'Edit group'
   end
 
   # POST /groups or /groups.json

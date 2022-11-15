@@ -9,10 +9,10 @@
 
 <section class="user-container">
   <div>
-    <%= current_user.name %>
+    <strong><%= current_user.name %></strong>
   </div>
   <span>
-    $<%= @group.establishments.sum(:amount) %>
+    <strong><%= number_to_currency(@group.establishments.sum(:amount)) %></strong>
   </span>
 </section>
 
@@ -29,7 +29,9 @@
     <% end %>
   </div>
   
-  <%= link_to "New establishment", new_group_establishment_path(@group), class: 'button-1' %>
+  <%= link_to "Back to groups", groups_path, class: 'back-button' %>
   
-  <%= link_to "Back to groups", groups_path %>
+  <div class="green-button-div">
+    <%= link_to "New establishment", new_group_establishment_path(@group), class: 'green-button' %>
+  </div>
 </section>

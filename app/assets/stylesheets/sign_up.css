@@ -5,6 +5,18 @@
   justify-content: space-between;
   height: 50px;
   align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.registration-container {
+  padding-top: 20px;
+  min-height: calc(100vh - 50px);
+}
+
+.back-icon img {
+  width: 30px;
+  filter: invert(1);
 }
 
 .registration-input {
@@ -12,6 +24,8 @@
   width: 100%;
   height: 40px;
   border: 1px solid lightgray;
+  border-top: none;
+  padding: 10px;
 }
 
 .registration-input::placeholder {

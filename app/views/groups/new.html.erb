@@ -1,9 +1,7 @@
-<h1>New group</h1>
-
-<%= render "form", group: @group %>
-
-<br>
+<div>
+  <%= render "form", group: @group %>
+</div>
 
 <div>
-  <%= link_to "Back to groups", groups_path %>
+  <%= link_to "Back to groups", groups_path, class: 'back-button' %>
 </div>

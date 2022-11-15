@@ -17,10 +17,10 @@
 .establishment {
   background-color: white;
   border: 1px solid lightgrey;
-  padding: 10px;
   display: flex;
-  gap: 10px;
   position: relative;
+  padding: 10px;
+  gap: 10px;
 }
 
 .establishment-icon {
@@ -43,7 +43,7 @@
 
 .establishment-date {
   position: absolute;
-  right: 0;
+  left: 55px;
   bottom: 0;
   padding: 10px;
 }

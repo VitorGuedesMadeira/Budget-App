@@ -3,10 +3,10 @@
   
   <%= render @establishment %>
   
-  <div>
-    <%= link_to "Edit this establishment", edit_group_establishment_path(@group, @establishment), class: 'button-1' %>
-    <%= button_to "Destroy this establishment", group_establishment_path(@group, @establishment), method: :delete %>
+  <div class="group-buttons">
+    <%= link_to image_tag('edit.png'), edit_group_establishment_path(@group, @establishment), class: 'group-edit-button' %>
+    <%= button_to image_tag('trash.png'), group_establishment_path(@group, @establishment), method: :delete, class: 'group-destroy-button' %>
   </div>
   
-  <%= link_to "Back to establishments", group_establishments_path %>
+  <%= link_to "Back to establishments", group_establishments_path, class: 'back-button' %>
 </section>

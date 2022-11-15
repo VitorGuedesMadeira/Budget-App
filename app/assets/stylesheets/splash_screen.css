@@ -11,6 +11,7 @@
 .application-title {
   font-size: 3em;
   font-family: 'Goligan', sans-serif;
+  color: var(--color-3);
 }
 
 .login-buttons {

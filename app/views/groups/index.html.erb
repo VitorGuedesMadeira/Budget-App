@@ -9,10 +9,10 @@
 
 <section class="user-container">
   <div>
-    <%= current_user.name %>
+    <strong><%= current_user.name %></strong>
   </div>
   <span>
-    $1250,55
+    <strong><%= number_to_currency(1000) %></strong>
   </span>
 </section>
 
@@ -20,14 +20,16 @@
   <p style="color: green"><%= notice %></p>
   
   <div class="groups">
+    <% @total_amount = 0 %>
     <% @groups.each do |group| %>
       <% if can? :manage, group %>
         <div>
           <%= link_to(group_establishments_path(group)) do %>
             <%= render group %>
+            <% @total_amount += (group.establishments.sum(:amount)) %>
             <div class="group-buttons">
-              <%= link_to "Edit this group", edit_group_path(group), class: 'group-edit-button' %>
-              <%= button_to "Destroy this group", group_path(group), method: :delete, class: 'group-destroy-button' %>
+              <%= button_to image_tag('trash.png'), group_path(group), method: :delete, class: 'group-destroy-button' %>
+              <%= link_to image_tag('edit.png'), edit_group_path(group), class: 'group-edit-button' %>
             </div>
           <% end %>
         </div>
@@ -35,5 +37,9 @@
     <% end %>
   </div>
   
-  <%= link_to "New group", new_group_path, class: 'button-1' %>
+  <div class="green-button-div">
+    <%= link_to "New group", new_group_path, class: 'green-button' %>
+  </div>
 </section>
+
+<%= @total_amount %>

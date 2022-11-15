@@ -4,12 +4,7 @@
   </div>
 
   <div class="group-info">
-    <p>
-      <strong><%= group.name %></strong>
-    </p>
-    <p>
-      <strong><span>$<%= group.establishments.sum(:amount) %></span></strong>
-    </p>
+    <p><strong><%= group.name %></strong></p>
+    <p><strong><span><%= number_to_currency(group.establishments.sum(:amount)) %></span></strong></p>
   </div>
-
 </div>
