@@ -10,8 +10,17 @@
   </p>
 
   <p>
-    <strong>Amount:</strong>
-    <%= establishment.amount %>
+    <strong>Group:</strong>
+    <%= @group.name %>
   </p>
 
+  <p>
+    <strong>Amount:</strong>
+    <span>$<%= establishment.amount %></span>
+  </p>
+
+  <p>
+    <strong>Created At:</strong>
+    <span><%= establishment.created_at.strftime("%e %b %y") %></span>
+  </p>
 </div>

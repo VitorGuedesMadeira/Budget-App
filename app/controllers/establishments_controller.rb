@@ -14,7 +14,7 @@ class EstablishmentsController < ApplicationController
 
   # GET /establishments/new
   def new
-    @establishment = Establishment.new
+    @establishment = current_user.establishments.build
   end
 
   # GET /establishments/1/edit
@@ -23,8 +23,8 @@ class EstablishmentsController < ApplicationController
 
   # POST /establishments or /establishments.json
   def create
-    @establishment = Establishment.new(establishment_params)
-    @establishment.user = current_user
+    @establishment = current_user.establishments.build(establishment_params)
+    @establishment.groups << @group
 
     respond_to do |format|
       if @establishment.save
@@ -41,7 +41,7 @@ class EstablishmentsController < ApplicationController
   def update
     respond_to do |format|
       if @establishment.update(establishment_params)
-        format.html { redirect_to group_establishment_path(@group, @establishment), notice: "Establishment was successfully updated." }
+        format.html { redirect_to group_establishments_path(@group), notice: "Establishment was successfully updated." }
         format.json { render :show, status: :ok, location: @establishment }
       else
         format.html { render :edit, status: :unprocessable_entity }

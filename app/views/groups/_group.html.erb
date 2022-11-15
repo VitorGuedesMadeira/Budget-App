@@ -9,4 +9,9 @@
     <%= group.icon %>
   </p>
 
+  <p>
+    <strong>Total:</strong>
+    <span>$<%= group.establishments.sum(:amount) %></span>
+  </p>
+
 </div>
