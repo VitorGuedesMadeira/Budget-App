@@ -11,3 +11,7 @@
   --color-3: #434b54;
   --color-4: #f1f3f2;
 }
+
+body {
+  background-color: #434b54;
+}

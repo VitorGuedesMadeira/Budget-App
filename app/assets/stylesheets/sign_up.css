@@ -1,0 +1,19 @@
+.registration-header {
+  background-color: var(--color-1);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+}
+
+.registration-input {
+  outline: none;
+  width: 100%;
+  height: 40px;
+  border: 1px solid lightgray;
+}
+
+.registration-input::placeholder {
+  color: lightgrey;
+}

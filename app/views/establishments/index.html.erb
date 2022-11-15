@@ -4,10 +4,10 @@
 
 <div id="establishments">
   <% @establishments.each do |establishment| %>
-    <%= render establishment %>
-    <p>
+    <% if can? :manage, establishment %>
+      <%= render establishment %>
       <%= link_to "Show this establishment", group_establishment_path(@group, establishment) %>
-    </p>
+    <% end %>
   <% end %>
 </div>
 

@@ -1,0 +1,36 @@
+.splash-screen-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  padding: 10px;
+}
+
+.application-title {
+  font-size: 3em;
+}
+
+.login-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sign-up-button {
+  width: 100%;
+  color: var(--color-3);
+  text-align: center;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.sign-in-button {
+  background-color: var(--color-1);
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 3px;
+}
