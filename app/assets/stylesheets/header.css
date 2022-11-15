@@ -3,4 +3,15 @@ header {
   height: 50px;
   background-color: var(--color-1);
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-button {
+  color: white;
+}
+
+.hamburger-icon {
+  width: 30px;
 }

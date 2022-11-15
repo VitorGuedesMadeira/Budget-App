@@ -21,6 +21,9 @@ gem "puma", "~> 5.0"
 # Use Devise for user authentication
 gem 'devise'
 
+# Use CanCanCan for user authorization
+gem 'cancancan'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
