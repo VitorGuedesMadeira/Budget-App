@@ -10,8 +10,40 @@
   gap: 10px;
 }
 
+.establishments a {
+  color: var(--color-3);
+}
+
 .establishment {
   background-color: white;
   border: 1px solid lightgrey;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+
+.establishment-icon {
+  border: 1px solid lightgray;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  background-color: #3778c260;
+}
+
+.establishment-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.establishment-date {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   padding: 10px;
 }

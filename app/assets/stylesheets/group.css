@@ -30,6 +30,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
+  color: var(--color-3);
 }
 
 .groups {
@@ -38,10 +39,34 @@
   gap: 10px;
 }
 
+.groups a {
+  color: var(--color-3);
+}
+
 .group {
   background-color: white;
   border: 1px solid lightgrey;
   padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.group-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.group-icon {
+  border: 1px solid lightgray;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  background-color: #3778c260;
 }
 
 .group-buttons {

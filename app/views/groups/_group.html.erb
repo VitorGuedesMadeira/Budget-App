@@ -1,17 +1,15 @@
 <div class="group">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
-
-  <p>
-    <strong>Icon:</strong>
+  <div class="group-icon">
     <%= group.icon %>   
-  </p>
+  </div>
 
-  <p>
-    <strong>Total:</strong>
-    <span>$<%= group.establishments.sum(:amount) %></span>
-  </p>
+  <div class="group-info">
+    <p>
+      <strong><%= group.name %></strong>
+    </p>
+    <p>
+      <strong><span>$<%= group.establishments.sum(:amount) %></span></strong>
+    </p>
+  </div>
 
 </div>

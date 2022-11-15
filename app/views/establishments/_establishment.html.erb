@@ -1,26 +1,14 @@
 <div class="establishment">
-  <p>
-    <strong>Name:</strong>
-    <%= establishment.name %>
-  </p>
+  <div class="establishment-icon">
+    <%= @group.icon %> 
+  </div>
+  
+  <div class="establishment-info">
+    <p><strong><%= establishment.name %></strong></p>
+    <p><strong><span>$<%= establishment.amount %></span></strong></p>
+  </div>
 
   <p>
-    <strong>Username:</strong>
-    <%= establishment.user.name %>
-  </p>
-
-  <p>
-    <strong>Group:</strong>
-    <%= @group.name %>
-  </p>
-
-  <p>
-    <strong>Amount:</strong>
-    <span>$<%= establishment.amount %></span>
-  </p>
-
-  <p>
-    <strong>Created At:</strong>
-    <span><%= establishment.created_at.strftime("%e %b %y") %></span>
+    <small class="establishment-date"><%= establishment.created_at.strftime("%e %b %y") %></small>
   </p>
 </div>

@@ -18,9 +18,7 @@
 
 <section class="establishments-container">
   <p style="color: green"><%= notice %></p>
-  
-  <h1><%= @group.name %></h1>
-  
+    
   <div class="establishments">
     <% @establishments.each do |establishment| %>
       <% if can? :manage, establishment %>

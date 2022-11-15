@@ -6,6 +6,7 @@ class EstablishmentsController < ApplicationController
   # GET /establishments or /establishments.json
   def index
     @establishments = @group.establishments.order(created_at: :desc)
+    @title = @group.name
   end
 
   # GET /establishments/1 or /establishments/1.json

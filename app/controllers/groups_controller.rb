@@ -5,6 +5,7 @@ class GroupsController < ApplicationController
   # GET /groups or /groups.json
   def index
     @groups = Group.all
+    @title = 'Groups'
   end
 
   # GET /groups/1 or /groups/1.json
