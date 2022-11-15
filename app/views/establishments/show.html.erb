@@ -1,10 +1,12 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @establishment %>
-
-<div>
-  <%= link_to "Edit this establishment", edit_group_establishment_path(@group, @establishment) %>
-  <%= button_to "Destroy this establishment", group_establishment_path(@group, @establishment), method: :delete %>
-</div>
-
-<%= link_to "Back to establishments", group_establishments_path %>
+<section class="establishments-container">
+  <p style="color: green"><%= notice %></p>
+  
+  <%= render @establishment %>
+  
+  <div>
+    <%= link_to "Edit this establishment", edit_group_establishment_path(@group, @establishment) %>
+    <%= button_to "Destroy this establishment", group_establishment_path(@group, @establishment), method: :delete %>
+  </div>
+  
+  <%= link_to "Back to establishments", group_establishments_path %>
+</section>

@@ -1,0 +1,71 @@
+.selection-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--color-1);
+  border-bottom: 1px solid lightgray;
+  height: 50px;
+  padding: 10px;
+  color: white;
+}
+
+.selection-container span {
+  width: calc(100%/3);
+  text-align: center;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+.user-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  height: 50px;
+  padding: 10px;
+}
+
+.groups-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.group {
+  background-color: white;
+  border: 1px solid lightgrey;
+  padding: 10px;
+}
+
+.group-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.group-edit-button {
+  color: var(--color-3);
+  background-color: lightgray;
+  padding: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 0.8em;
+}
+
+.group-destroy-button {
+  color: var(--color-3);
+  background-color: lightgray;
+  height: 100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 0.7em;
+}

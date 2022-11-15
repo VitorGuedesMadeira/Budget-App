@@ -24,6 +24,9 @@ gem 'devise'
 # Use CanCanCan for user authorization
 gem 'cancancan'
 
+# Use Awesome Fonts for icons
+gem 'font-awesome-rails'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 

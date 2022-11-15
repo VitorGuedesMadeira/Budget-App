@@ -1,16 +1,41 @@
-<p style="color: green"><%= notice %></p>
+<section class="selection-container">
+  <span>
+    Most recent
+  </span>
+  <span>
+    Most ancient
+  </span>
+</section>
 
-<h1>Groups</h1>
+<section class="user-container">
+  <div>
+    <%= current_user.name %>
+  </div>
+  <span>
+    $1000,00
+  </span>
+</section>
 
-<div id="groups">
-  <% @groups.each do |group| %>
-    <%= render group %>
-    <p>
-      <%= link_to "Show this group", group_establishments_path(group) %>
-      <%= link_to "Edit this group", edit_group_path(group) %>
-      <%= button_to "Destroy this group", group_path(group), method: :delete %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New group", new_group_path %>
+<section class="groups-container">
+  <p style="color: green"><%= notice %></p>
+  
+  <h1>Groups</h1>
+  
+  <div class="groups">
+    <% @groups.each do |group| %>
+      <% if can? :manage, group %>
+        <div>
+          <%= link_to(group_establishments_path(group)) do %>
+            <%= render group %>
+            <div class="group-buttons">
+              <%= link_to "Edit this group", edit_group_path(group), class: 'group-edit-button' %>
+              <%= button_to "Destroy this group", group_path(group), method: :delete, class: 'group-destroy-button' %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  
+  <%= link_to "New group", new_group_path %>
+</section>

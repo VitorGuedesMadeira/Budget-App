@@ -1,16 +1,19 @@
-<p style="color: green"><%= notice %></p>
-
-<h1><%= @group.name %></h1>
-
-<div id="establishments">
-  <% @establishments.each do |establishment| %>
-    <% if can? :manage, establishment %>
-      <%= render establishment %>
-      <%= link_to "Show this establishment", group_establishment_path(@group, establishment) %>
+<section class="establishments-container">
+  <p style="color: green"><%= notice %></p>
+  
+  <h1><%= @group.name %></h1>
+  
+  <div class="establishments">
+    <% @establishments.each do |establishment| %>
+      <% if can? :manage, establishment %>
+        <%= link_to(group_establishment_path(@group, establishment)) do %>
+          <%= render establishment %>
+        <% end %>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
-
-<%= link_to "New establishment", new_group_establishment_path(@group) %>
-
-<%= link_to "Back to groups", groups_path %>
+  </div>
+  
+  <%= link_to "New establishment", new_group_establishment_path(@group) %>
+  
+  <%= link_to "Back to groups", groups_path %>
+</section>

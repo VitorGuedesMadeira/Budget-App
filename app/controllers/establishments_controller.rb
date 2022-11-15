@@ -72,6 +72,6 @@ class EstablishmentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def establishment_params
-      params.require(:establishment).permit(:name, :amount)
+      params.require(:establishment).permit(:name, :amount, group_ids: [])
     end
 end
