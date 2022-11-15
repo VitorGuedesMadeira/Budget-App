@@ -5,7 +5,7 @@ class EstablishmentsController < ApplicationController
 
   # GET /establishments or /establishments.json
   def index
-    @establishments = @group.establishments
+    @establishments = @group.establishments.order(created_at: :desc)
   end
 
   # GET /establishments/1 or /establishments/1.json
@@ -72,6 +72,6 @@ class EstablishmentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def establishment_params
-      params.require(:establishment).permit(:name, :amount, group_ids: [])
+      params.require(:establishment).permit(:name, :amount)
     end
 end

@@ -22,13 +22,6 @@
   </div>
 
   <div>
-    <h2>Select a Group</h2>
-    <%= form.label :group, style: "display: block" %>
-    <%= form.collection_check_boxes :group_ids, Group.where(user_id: current_user.id), :id, :name %>
-  </div>
-
-
-  <div>
     <%= form.submit %>
   </div>
 <% end %>
