@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'splash_screen#index'
-  resources :users, only: %i[new create create update destroy]
+  resources :users, only: %i[ create update destroy]
   resources :groups do
     resources :establishments
   end
