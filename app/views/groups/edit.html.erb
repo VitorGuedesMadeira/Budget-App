@@ -1,11 +1,15 @@
-<div>
-  <%= render @group %>
+<% if can? :manage, @group %>
+  <div>
+    <%= render @group %>
 
-  <div class="edit-group-container">
-    <div>
-      <%= render "form", group: @group, class: "edit-form" %>
+    <div class="edit-group-container">
+      <div>
+        <%= render "form", group: @group, class: "edit-form" %>
+      </div>
+      
+      <%= link_to "Back to groups", groups_path, class: 'back-button' %>
     </div>
-    
-    <%= link_to "Back to groups", groups_path, class: 'back-button' %>
   </div>
-</div>
+<% else %>
+  "get out of here"
+<% end %>

@@ -1,11 +1,15 @@
-<div>
-  <%= render @establishment %>
+<% if can? :manage, @group %>
+  <div>
+    <%= render @establishment %>
 
-  <div class="edit-group-container">
-    <div>
-      <%= render "form", establishment: @establishment %>
+    <div class="edit-group-container">
+      <div>
+        <%= render "form", establishment: @establishment %>
+      </div>
+      
+      <%= link_to "Back to establishments", group_establishments_path, class: 'back-button' %>
     </div>
-    
-    <%= link_to "Back to establishments", group_establishments_path, class: 'back-button' %>
   </div>
-</div>
+<% else %>
+  "Get out of here"
+<% end %>

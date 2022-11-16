@@ -11,6 +11,7 @@ class EstablishmentsController < ApplicationController
 
   # GET /establishments/1 or /establishments/1.json
   def show
+    @title = @group.name.singularize
   end
 
   # GET /establishments/new
@@ -20,6 +21,7 @@ class EstablishmentsController < ApplicationController
 
   # GET /establishments/1/edit
   def edit
+    @title = 'Edit establishment'
   end
 
   # POST /establishments or /establishments.json

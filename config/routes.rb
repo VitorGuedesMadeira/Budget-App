@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'splash_screen#index'
-  resources :users
+  resources :users, only: [ :new, :create, :create, :update, :destroy ]
   resources :groups do
     resources :establishments  
   end

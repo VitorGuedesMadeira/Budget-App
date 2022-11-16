@@ -59,7 +59,7 @@
   color: white;
   text-align: center;
   background-color: var(--color-2);
-  width: 375px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

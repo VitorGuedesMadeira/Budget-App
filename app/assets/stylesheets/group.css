@@ -133,6 +133,7 @@
   width: 150px;
   min-height: 100%;
   text-align: center;
+  outline: none;
 }
 
 #group_icon {

@@ -25,5 +25,6 @@ RSpec.describe Establishment, type: :model do
     it 'email should return a string' do
       expect(@establishment.amount).to be_a_kind_of(Numeric)
     end
+
   end
 end

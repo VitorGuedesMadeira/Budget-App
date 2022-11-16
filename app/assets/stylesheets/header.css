@@ -1,12 +1,18 @@
 header {
-  width: 375px;
-  height: 50px;
-  background-color: var(--color-1);
-  color: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-end;
+  background-color: var(--color-1);
+  height: 50px;
   padding: 10px;
+  color: white;
+}
+
+header > * {
+  width: calc(100%/3);
+  text-align: center;
+  font-weight: 100;
+  cursor: pointer;
 }
 
 .logout-button {
@@ -17,4 +23,12 @@ header {
   width: 30px;
   filter: invert(1);
   cursor: pointer;
+}
+
+.left-span {
+  text-align: left;
+}
+
+.right-span {
+  text-align: right;
 }
