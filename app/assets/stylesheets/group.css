@@ -10,7 +10,7 @@
 }
 
 .selection-container span {
-  width: calc(100%/3);
+  width: calc(100% / 3);
   text-align: center;
   font-weight: 100;
   cursor: pointer;
