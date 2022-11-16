@@ -1,0 +1,14 @@
+<div class="establishment">
+  <div class="establishment-icon">
+    <%= @group.icon %> 
+  </div>
+  
+  <div class="establishment-info">
+    <p><strong><%= establishment.name %></strong></p>
+    <p><strong><span class="red-price"><%= number_to_currency(establishment.amount) %></span></strong></p>
+  </div>
+
+  <p>
+    <small class="establishment-date"><%= establishment.created_at.strftime("%e %b %y") %></small>
+  </p>
+</div>

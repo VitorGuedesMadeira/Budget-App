@@ -1,0 +1,44 @@
+.registration-header {
+  background-color: var(--color-1);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.registration-container {
+  padding-top: 20px;
+  min-height: calc(100vh - 50px);
+  text-align: center;
+}
+
+.registration-container a {
+  color: rgb(62, 4, 72);
+  font-weight: 700;
+}
+
+.back-icon img {
+  width: 30px;
+  filter: invert(1);
+}
+
+.registration-input {
+  outline: none;
+  width: 100%;
+  height: 40px;
+  border: 1px solid lightgray;
+  border-top: none;
+  padding: 10px;
+}
+
+.registration-input::placeholder {
+  color: lightgrey;
+}
+
+.remember-me {
+  color: var(--color-3);
+  text-align: center;
+}

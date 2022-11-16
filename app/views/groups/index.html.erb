@@ -1,0 +1,41 @@
+<div class='column-reverse'>
+  <section class="groups-container">
+    <p style="color: green"><%= alert %></p>
+  
+    <div class="groups">
+      <% @total_amount = 0 %>
+      <% @groups.each do |group| %>
+        <% if can? :manage, group %>
+          <div>
+            <%= link_to(group_establishments_path(group)) do %>
+              <%= render group %>
+              <% @total_amount += (group.establishments.sum(:amount)) %>
+              <div class="group-buttons">
+                <%= link_to image_tag('edit.png'), edit_group_path(group), class: 'group-edit-button' %>
+                <%= button_to image_tag('trash.png'), group_path(group), method: :delete, class: 'group-destroy-button' %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </section>
+  
+  <section class="user-container">
+    <div>
+      <strong><%= current_user.name %></strong>
+    </div>
+    <span class="red-price">
+      <strong><%= number_to_currency(@total_amount) %></strong>
+    </span>
+  </section>
+  
+  <section class="selection-container">
+    <span>Most recent</span>
+    <span><%= link_to "Settings", edit_user_registration_path %></span>
+  </section>
+</div>
+  
+  <div class="green-button-div">
+    <%= link_to "New group", new_group_path, class: 'green-button' %>
+  </div>

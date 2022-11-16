@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+  <header>
+    <span class="left-span">
+      <div>
+        <nav><%= image_tag 'hamburger.png', class: "hamburger-icon" %></nav>
+      </div>
+    </span>
+    <span>
+      <h2><%= @title %></h2>
+    </span>
+    <span class="right-span"><%= link_to("Log out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: "logout-button") %></span>
+  </header>
+<% end  %>

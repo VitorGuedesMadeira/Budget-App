@@ -1,0 +1,10 @@
+<div class="group">
+  <div class="group-icon">
+    <%= group.icon %>   
+  </div>
+
+  <div class="group-info">
+    <p><strong><%= group.name %></strong></p>
+    <p><strong><span class="red-price"><%= number_to_currency(group.establishments.sum(:amount)) %></span></strong></p>
+  </div>
+</div>
