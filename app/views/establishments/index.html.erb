@@ -1,17 +1,13 @@
 <section class="selection-container">
-  <span>
-    Most recent
-  </span>
-  <span>
-    Most ancient
-  </span>
+    <span>Most recent</span>
+    <span><%= link_to "Settings", edit_user_registration_path %></span>
 </section>
 
 <section class="user-container">
   <div>
     <strong><%= current_user.name %></strong>
   </div>
-  <span>
+  <span class="red-price">
     <strong><%= number_to_currency(@group.establishments.sum(:amount)) %></strong>
   </span>
 </section>

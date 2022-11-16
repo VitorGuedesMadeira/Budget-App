@@ -12,6 +12,12 @@
 .registration-container {
   padding-top: 20px;
   min-height: calc(100vh - 50px);
+  text-align: center;
+}
+
+.registration-container a {
+  color: rgb(62, 4, 72);
+  font-weight: 700;
 }
 
 .back-icon img {
@@ -30,4 +36,9 @@
 
 .registration-input::placeholder {
   color: lightgrey;
+}
+
+.remember-me {
+  color: var(--color-3);
+  text-align: center;
 }

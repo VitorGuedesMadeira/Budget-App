@@ -1,7 +1,11 @@
 <div>
-  <%= render "form", group: @group %>
-</div>
+  <%= render @group %>
 
-<div>
-  <%= link_to "Back to groups", groups_path, class: 'back-button' %>
+  <div class="edit-group-container">
+    <div>
+      <%= render "form", group: @group, class: "edit-form" %>
+    </div>
+    
+    <%= link_to "Back to groups", groups_path, class: 'back-button' %>
+  </div>
 </div>

@@ -2,7 +2,6 @@
   <p style="color: green"><%= notice %></p>
   
   <%= render @establishment %>
-  
   <div class="group-buttons">
     <%= link_to image_tag('edit.png'), edit_group_establishment_path(@group, @establishment), class: 'group-edit-button' %>
     <%= button_to image_tag('trash.png'), group_establishment_path(@group, @establishment), method: :delete, class: 'group-destroy-button' %>

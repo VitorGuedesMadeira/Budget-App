@@ -1,5 +1,11 @@
-<%= render "form", establishment: @establishment %>
-
 <div>
-  <%= link_to "Back to establishments", group_establishments_path, class: 'back-button' %>
+  <%= render @establishment %>
+
+  <div class="edit-group-container">
+    <div>
+      <%= render "form", establishment: @establishment %>
+    </div>
+    
+    <%= link_to "Back to establishments", group_establishments_path, class: 'back-button' %>
+  </div>
 </div>

@@ -24,6 +24,19 @@
   margin-top: 10px;
 }
 
+.registration-button input {
+  padding: 5px;
+  background-color: var(--color-1);
+  color: white;
+  border: 1px solid lightgray;
+  width: fit-content;
+  font-size: 16px;
+  min-width: 175px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
 .back-button {
   padding: 5px;
   background-color: lightgray;
@@ -61,4 +74,17 @@
   font-size: 1.5em;
   width: 100%;
   height: 100%;
+}
+
+.cancel-account-button {
+  padding: 5px;
+  background-color: rgb(197, 48, 48);
+  color: white;
+  border: 1px solid lightgray;
+  width: fit-content;
+  font-size: 16px;
+  min-width: 175px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
 }
