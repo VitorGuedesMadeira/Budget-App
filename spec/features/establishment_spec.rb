@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.feature 'Establishments', type: :feature do
   before :each do
-    @user = User.create(name: 'Vitor Guedes', email: 'success@example.com', password: 'password', password_confirmation: 'password')
+    @user = User.create(name: 'Vitor Guedes', email: 'success@example.com', password: 'password',
+                        password_confirmation: 'password')
     @group = Group.create(name: 'Sports', icon: '🎲', user: @user)
     sign_in @user
     visit root_path

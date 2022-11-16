@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   subject do
-    User.create(name: 'Vitor Guedes', email: 'test@example.com', password: 'password', password_confirmation: 'password')
+    User.create(name: 'Vitor Guedes', email: 'test@example.com', password: 'password',
+                password_confirmation: 'password')
   end
 
   context 'Validations should be working' do

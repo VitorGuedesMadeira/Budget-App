@@ -1,8 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "Establishments", type: :request do
+RSpec.describe 'Establishments', type: :request do
   before :each do
-    @user = User.create(name: 'Vitor Guedes', email: 'success@example.com', password: 'password', password_confirmation: 'password')
+    @user = User.create(name: 'Vitor Guedes', email: 'success@example.com', password: 'password',
+                        password_confirmation: 'password')
     @group = Group.create(name: 'Movies', icon: 'Movie-image', user: @user)
     @establishment = Establishment.create(name: 'Avengers', amount: 100, user: @user)
     @establishment.groups << @group

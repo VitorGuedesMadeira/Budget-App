@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Groups', type: :request do
   before :each do
-    @user = User.create(name: 'Vitor Guedes', email: 'success@example.com', password: 'password', password_confirmation: 'password')
+    @user = User.create(name: 'Vitor Guedes', email: 'success@example.com', password: 'password',
+                        password_confirmation: 'password')
     @group = Group.create(name: 'Movies', icon: 'Movie-image', user: @user)
     sign_in @user
   end
@@ -34,5 +35,4 @@ RSpec.describe 'Groups', type: :request do
       expect(response).to be_successful
     end
   end
-
 end

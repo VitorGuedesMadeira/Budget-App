@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users
   root 'splash_screen#index'
-  resources :users, only: [ :new, :create, :create, :update, :destroy ]
+  resources :users, only: %i[new create create update destroy]
   resources :groups do
-    resources :establishments  
+    resources :establishments
   end
   # root "articles#index"
 end

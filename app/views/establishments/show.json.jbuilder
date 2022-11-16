@@ -1,1 +1,1 @@
-json.partial! "establishments/establishment", establishment: @establishment
+json.partial! 'establishments/establishment', establishment: @establishment

@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Group, type: :model do
   before do
-    @user = User.create(name: 'Vitor Guedes', email: 'test@example.com', password: 'password', password_confirmation: 'password')
+    @user = User.create(name: 'Vitor Guedes', email: 'test@example.com', password: 'password',
+                        password_confirmation: 'password')
     @group = Group.create(name: 'Movies', icon: 'Movie-image', user: @user)
   end
 
