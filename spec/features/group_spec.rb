@@ -21,6 +21,6 @@ RSpec.feature 'Groups', type: :feature do
     expect(page).to have_content '🎲'
     fill_in 'group_name', with: 'Sports'
     click_button 'Create Group'
-    expect(page).to have_content 'Group was successfully created.'
+    expect(page).to have_content 'Groups'
   end
 end
