@@ -46,6 +46,10 @@ Feel free to check the [issues page](https://github.com/VitorGuedesMadeira/Budge
 
 Give a ⭐️ if you like this project!
 
+## Design Template
+
+- I give credit to [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) the author of the [original design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
+
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
