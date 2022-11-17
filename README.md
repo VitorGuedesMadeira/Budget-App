@@ -20,7 +20,7 @@ Feel welcome to the [live version demo](https://budget-app-xrna.onrender.com/gro
 
 - Check the Ruby version or if you have at all by running `ruby -v` if you get something like this `ruby 2.6.8p205 (2021-07-07 revision 67951)` you have Ruby installed.
 - Clone the repository by runiing `git clone https://github.com/VitorGuedesMadeira/Budget-App.git` in your CLI.
-- `cd recipe-app`
+- `cd Budget-App`
 - Run `bundle install`
 - Run `rails db:create db:migrate`
 - Run `rails server`
