@@ -8,7 +8,7 @@ Mainly designed as a mobile application where the user can create new accounts, 
 
 # Mah Budget App
 
-Feel welcome to the [live version demo](https://budget-app-xrna.onrender.com/groups)
+Feel welcome to the [live version](https://budget-app-xrna.onrender.com/groups) demo
 
 # Quick view
 
