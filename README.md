@@ -26,7 +26,7 @@ Feel welcome to the [live version](https://budget-app-xrna.onrender.com/groups) 
 - Run `rails server`
 - Open Browser `http://localhost:3000/`
 
-## Testing
+## Testings
 
 - Run `rspec spec/`
 
