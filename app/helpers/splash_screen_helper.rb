@@ -1,0 +1,2 @@
+module SplashScreenHelper
+end

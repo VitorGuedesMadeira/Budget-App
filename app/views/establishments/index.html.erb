@@ -1,0 +1,37 @@
+<% if can? :manage, @group %>
+  <section class="selection-container">
+      <span>Most recent</span>
+      <span><%= link_to "Settings", edit_user_registration_path %></span>
+  </section>
+
+  <section class="user-container">
+    <div>
+      <strong><%= current_user.name %></strong>
+    </div>
+    <span class="red-price">
+      <strong><%= number_to_currency(@group.establishments.sum(:amount)) %></strong>
+    </span>
+  </section>
+
+  <section class="establishments-container">
+    <p style="color: green"><%= notice %></p>
+      
+    <div class="establishments">
+      <% @establishments.each do |establishment| %>
+        <% if can? :manage, establishment %>
+          <%= link_to(group_establishment_path(@group, establishment)) do %>
+            <%= render establishment %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+    
+    <%= link_to "Back to groups", groups_path, class: 'back-button' %>
+    
+    <div class="green-button-div">
+      <%= link_to "New establishment", new_group_establishment_path(@group), class: 'green-button' %>
+    </div>
+  </section>
+<% else %>
+  "Get out of here"
+<% end %>

@@ -1,0 +1,25 @@
+<%= form_with model: establishment, url: group_establishments_path(@group) do |form| %>
+  <% if establishment.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(establishment.errors.count, "error") %> prohibited this establishment from being saved:</h2>
+
+      <ul>
+        <% establishment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_field :name, placeholder: "#{@group.name} name" %>
+  </div>
+
+  <div>
+    <%= form.text_field :amount, placeholder: 'Amount' %>
+  </div>
+
+  <div class='create-group-button'>
+    <%= form.submit %>
+  </div>
+<% end %>
