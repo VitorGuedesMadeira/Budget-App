@@ -32,7 +32,7 @@ Feel welcome to the [live version](https://budget-app-xrna.onrender.com/groups) 
 
 ## Author
 
-👤 **Vitor Guedes Madeira** 🧑🏻‍
+👤 **Vitor Guedes Madeira** 🧑 🏻‍
 - GitHub: [@vitorguedesmadeira](https://github.com/VitorGuedesMadeira)
 - Twitter: [@CDahguedes](https://twitter.com/CDahguedes)
 - LinkedIn: [Vitor Guedes](https://www.linkedin.com/in/vitor-guedes-madeira/)
